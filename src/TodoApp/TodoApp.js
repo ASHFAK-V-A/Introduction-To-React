@@ -25,6 +25,18 @@ this.setState({
 })
 }
 
+deletebtn =(index)=>{
+
+const allItams = this.state.iteams
+
+allItams.splice(index,1)
+
+this.setState({
+    iteams:allItams
+})
+
+}
+
 
 
   render() {
@@ -51,7 +63,7 @@ this.setState({
      {iteams.map((data, index)=>(
 
       
-        <li key={index}>{data}<i className='fa fa-trash'></i></li>  
+        <li key={index}>{data}<i onClick={()=>this.deletebtn(index)} className='fa fa-trash'></i></li>  
 
   ))}
   

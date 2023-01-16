@@ -67,4 +67,5 @@ li{
 li i{
     text-align: right;
     flex: 1;
+    cursor: pointer;
 }
