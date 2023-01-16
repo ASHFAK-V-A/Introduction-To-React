@@ -57,3 +57,14 @@ ul li{
     border-radius: 8px;
 
 }
+
+
+li{
+    display: flex;
+}
+
+
+li i{
+    text-align: right;
+    flex: 1;
+}
