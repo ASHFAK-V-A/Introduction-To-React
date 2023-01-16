@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "./TodoApp.css"
+
 export default class TodoApp extends Component {
 
     state={
@@ -38,6 +39,17 @@ this.setState({
 }
 
 
+editbtn = (inde)=>{
+    let edi = prompt("enter new text")
+    const allItams = this.state.iteams
+
+    allItams.shift(inde)
+
+    this.setState({
+        iteams:allItams
+    })
+    
+}
 
   render() {
 
@@ -63,12 +75,13 @@ this.setState({
      {iteams.map((data, index)=>(
 
       
-        <li key={index}>{data}<i onClick={()=>this.deletebtn(index)} className='fa fa-trash'></i></li>  
+        <li key={index}>{data} <i onClick={()=>this.deletebtn(index)} className='fa fa-trash' style={{marginLeft:9}}> </i></li>  
 
   ))}
   
 
         </ul> 
+ 
       </div>   
     )
   }
